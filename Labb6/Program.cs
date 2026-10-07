@@ -55,13 +55,16 @@
             Console.WriteLine($"The removed employee is: {removedEmployee5.Name}\n" +
                 $"Objects remaining in stack: {employees.Count}\n");
 
-
             //add employees back to stack
             employees.Push(removedEmployee1);
             employees.Push(removedEmployee2);
             employees.Push(removedEmployee3);
             employees.Push(removedEmployee4);
             employees.Push(removedEmployee5);
+
+            //retrieve via peek method
+            Console.WriteLine($"The employee on top of the list is: {employees.Peek().Name}, {employees.Peek().Id}, {employees.Peek().Gender}, {employees.Peek().Salary}");
+            Console.WriteLine($"The employee on top of the list is: {employees.Peek().Name}, {employees.Peek().Id}, {employees.Peek().Gender}, {employees.Peek().Salary}");
 
         }
     }
