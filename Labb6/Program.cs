@@ -31,28 +31,25 @@
 
             //remove books via Pop
             Console.WriteLine("We are now removing employees:\n");
-
-            //while(employees.Count > 0) //as long as the employees list is not empty
-            //{
-            //    Employee removedEmployee = employees.Pop(); //we remove an employee and save their object
-            //    Console.WriteLine($"The removed employee is: {removedEmployee.Name}\n" + //write name of the removed employee
-            //        $"Objects remaining in stack: {employees.Count}\n"); //write how many objects are left in the stack
-            //}
-
             Employee removedEmployee1 = employees.Pop();
-            Console.WriteLine($"The removed employee is: {removedEmployee1.Name}\n" +
+            Console.WriteLine($"The removed employee is:\n" +
+                $"{removedEmployee1.Name}, {removedEmployee1.Id}, {removedEmployee1.Gender}, {removedEmployee1.Salary}\n" +
                 $"Objects remaining in stack: {employees.Count}\n");
             Employee removedEmployee2 = employees.Pop();
-            Console.WriteLine($"The removed employee is: {removedEmployee2.Name}\n" +
+            Console.WriteLine($"The removed employee is:\n" +
+                $"{removedEmployee2.Name},{removedEmployee2.Id}, {removedEmployee2.Gender}, {removedEmployee2.Salary}\n" +              
                 $"Objects remaining in stack: {employees.Count}\n");
             Employee removedEmployee3 = employees.Pop();
-            Console.WriteLine($"The removed employee is: {removedEmployee3.Name}\n" +
-                $"Objects remaining in stack: {employees.Count}\n");
+            Console.WriteLine($"The removed employee is:\n" +
+                $"{removedEmployee3.Name}, {removedEmployee3.Id}, {removedEmployee3.Gender}, {removedEmployee3.Salary}\n" +
+            $"Objects remaining in stack: {employees.Count}\n");
             Employee removedEmployee4 = employees.Pop();
-            Console.WriteLine($"The removed employee is: {removedEmployee4.Name}\n" +
+            Console.WriteLine($"The removed employee is:\n" +
+                $"{removedEmployee4.Name}, {removedEmployee4.Id}, {removedEmployee4.Gender}, {removedEmployee4.Salary}\n" +
                 $"Objects remaining in stack: {employees.Count}\n");
             Employee removedEmployee5 = employees.Pop();
-            Console.WriteLine($"The removed employee is: {removedEmployee5.Name}\n" +
+            Console.WriteLine($"The removed employee is:\n" +
+                $"{removedEmployee5.Name}, {removedEmployee5.Id}, {removedEmployee5.Gender}, {removedEmployee5.Salary}\n" +
                 $"Objects remaining in stack: {employees.Count}\n");
 
             //add employees back to stack
