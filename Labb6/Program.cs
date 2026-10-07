@@ -32,11 +32,11 @@
             //remove books via Pop, via while loop
             Console.WriteLine("We are now removing employees:\n");
 
-            while(employees.Count > 0)
+            while(employees.Count > 0) //as long as the employees list is not empty
             {
-                Employee removedEmployee = employees.Pop();
-                Console.WriteLine($"The removed employee is: {removedEmployee.Name}\n" +
-                    $"Objects remaining in stack: {employees.Count}\n");
+                Employee removedEmployee = employees.Pop(); //we remove an employee and save their object
+                Console.WriteLine($"The removed employee is: {removedEmployee.Name}\n" + //write name of the removed employee
+                    $"Objects remaining in stack: {employees.Count}\n"); //write how many objects are left in the stack
             }
 
 
