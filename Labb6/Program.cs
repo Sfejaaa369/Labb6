@@ -4,6 +4,9 @@
     {
         static void Main(string[] args)
         {
+            //DEL 1: STACK
+            Console.WriteLine("==== DEL 1: STACK ====\n");
+
             //create stack
             Stack<Employee> employees = new Stack<Employee>();
 
@@ -78,6 +81,9 @@
                 Console.WriteLine("No, employee 3 is not in the stack.");
             }
 
+            ///DEL 2: List
+            Console.WriteLine("\n==== DEL 2: LIST ====\n");
+
             //create list
             List<Employee> employeesList = new List<Employee>();
             employeesList.Add(employee1);
@@ -85,6 +91,20 @@
             employeesList.Add(employee3);
             employeesList.Add(employee4);
             employeesList.Add(employee5);
+
+            //check if employee 2 is in the list via contains
+            if (employeesList.Contains(employee2))
+            {
+                Console.WriteLine("Employee2 object exists in the list.");
+            }
+            else
+            {
+                Console.WriteLine("Employee2 object does not exist in the list.");
+            }
+
+            //write out first object that has gender male via find method
+
+
 
         }
     }
