@@ -104,9 +104,14 @@
 
             //write out first object that has gender male via find method
             Employee maleEmployee = employeesList.Find(emp => emp.Gender == "man");
-            Console.WriteLine($"{maleEmployee.Name}, {maleEmployee.Id}, {maleEmployee.Gender}, {maleEmployee.Salary}");
+            Console.WriteLine($"{maleEmployee.Name}, {maleEmployee.Id}, {maleEmployee.Gender}, {maleEmployee.Salary}\n");
 
-
+            //write out all male employees via find all method
+            List<Employee> maleEmployees = employeesList.FindAll(emp => emp.Gender == "man");
+            foreach(var maleEmp in maleEmployees)
+            {
+                Console.WriteLine($"{maleEmp.Name},{maleEmp.Id}, {maleEmp.Gender}, {maleEmp.Salary}");
+            }
 
         }
     }
