@@ -15,7 +15,7 @@
             Employee employee2 = new Employee("E002", "Oskar", "man", 44000);
             Employee employee3 = new Employee("E003", "Sara", "woman", 44500);
             Employee employee4 = new Employee("E004", "Elin", "woman", 44500);
-            Employee employee5 = new Employee("E005", "Prislla", "woman", 44500);
+            Employee employee5 = new Employee("E005", "Joseph", "man", 44500);
 
             //push employees into stack
             employees.Push(employee1);
@@ -103,6 +103,8 @@
             }
 
             //write out first object that has gender male via find method
+            Employee maleEmployee = employeesList.Find(emp => emp.Gender == "man");
+            Console.WriteLine($"{maleEmployee.Name}, {maleEmployee.Id}, {maleEmployee.Gender}, {maleEmployee.Salary}");
 
 
 
