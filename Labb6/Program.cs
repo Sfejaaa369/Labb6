@@ -29,23 +29,32 @@
                     $"Objects remaining in stack: {employees.Count}\n");
             }
 
-            //remove books via Pop
+            //remove books via Pop, via while loop
             Console.WriteLine("We are now removing employees:\n");
-            Employee removedEmployee1 = employees.Pop();
-            Console.WriteLine($"The removed employee is: {removedEmployee1.Name}\n" +
-                $"Objects remaining in stack: {employees.Count}\n");
-            Employee removedEmployee2 = employees.Pop();
-            Console.WriteLine($"The removed employee is: {removedEmployee2.Name}\n" +
-                $"Objects remaining in stack: {employees.Count}\n");
-            Employee removedEmployee3 = employees.Pop();
-            Console.WriteLine($"The removed employee is: {removedEmployee3.Name}\n" +
-                $"Objects remaining in stack: {employees.Count}\n");
-            Employee removedEmployee4 = employees.Pop();
-            Console.WriteLine($"The removed employee is: {removedEmployee4.Name}\n" +
-                $"Objects remaining in stack: {employees.Count}\n");
-            Employee removedEmployee5 = employees.Pop();
-            Console.WriteLine($"The removed employee is: {removedEmployee5.Name}\n" +
-                $"Objects remaining in stack: {employees.Count}\n");
+
+            while(employees.Count > 0)
+            {
+                Employee removedEmployee = employees.Pop();
+                Console.WriteLine($"The removed employee is: {removedEmployee.Name}\n" +
+                    $"Objects remaining in stack: {employees.Count}\n");
+            }
+
+
+            //Employee removedEmployee1 = employees.Pop();
+            //Console.WriteLine($"The removed employee is: {removedEmployee1.Name}\n" +
+            //    $"Objects remaining in stack: {employees.Count}\n");
+            //Employee removedEmployee2 = employees.Pop();
+            //Console.WriteLine($"The removed employee is: {removedEmployee2.Name}\n" +
+            //    $"Objects remaining in stack: {employees.Count}\n");
+            //Employee removedEmployee3 = employees.Pop();
+            //Console.WriteLine($"The removed employee is: {removedEmployee3.Name}\n" +
+            //    $"Objects remaining in stack: {employees.Count}\n");
+            //Employee removedEmployee4 = employees.Pop();
+            //Console.WriteLine($"The removed employee is: {removedEmployee4.Name}\n" +
+            //    $"Objects remaining in stack: {employees.Count}\n");
+            //Employee removedEmployee5 = employees.Pop();
+            //Console.WriteLine($"The removed employee is: {removedEmployee5.Name}\n" +
+            //    $"Objects remaining in stack: {employees.Count}\n");
 
 
 
