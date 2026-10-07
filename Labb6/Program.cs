@@ -68,6 +68,7 @@
                 $"{employees.Peek().Name}, {employees.Peek().Id}, {employees.Peek().Gender}, {employees.Peek().Salary}\n" +
                 $"Objects remaining in stack: {employees.Count}\n");
 
+            //check if employee 3 is in the stack
             if (employees.Contains(employee3))
             {
                 Console.WriteLine("Yes, employee 3 is in the stack.");
@@ -76,6 +77,15 @@
             {
                 Console.WriteLine("No, employee 3 is not in the stack.");
             }
+
+            //create list
+            List<Employee> employeesList = new List<Employee>();
+            employeesList.Add(employee1);
+            employeesList.Add(employee2);
+            employeesList.Add(employee3);
+            employeesList.Add(employee4);
+            employeesList.Add(employee5);
+
         }
     }
 }
