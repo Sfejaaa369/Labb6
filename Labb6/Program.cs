@@ -32,36 +32,26 @@
                     $"Objects remaining in stack: {employees.Count}\n");
             }
 
-            //remove books via Pop
+            //remove books via Pop - with while loop to avoid double coding
             Console.WriteLine("REMOVING EMPLOYEES:\n");
-            Employee removedEmployee1 = employees.Pop();
-            Console.WriteLine($"The removed employee is:\n" +
-                $"{removedEmployee1.Name}, {removedEmployee1.Id}, {removedEmployee1.Gender}, {removedEmployee1.Salary}\n" +
-                $"Objects remaining in stack: {employees.Count}\n");
-            Employee removedEmployee2 = employees.Pop();
-            Console.WriteLine($"The removed employee is:\n" +
-                $"{removedEmployee2.Name},{removedEmployee2.Id}, {removedEmployee2.Gender}, {removedEmployee2.Salary}\n" +              
-                $"Objects remaining in stack: {employees.Count}\n");
-            Employee removedEmployee3 = employees.Pop();
-            Console.WriteLine($"The removed employee is:\n" +
-                $"{removedEmployee3.Name}, {removedEmployee3.Id}, {removedEmployee3.Gender}, {removedEmployee3.Salary}\n" +
-            $"Objects remaining in stack: {employees.Count}\n");
-            Employee removedEmployee4 = employees.Pop();
-            Console.WriteLine($"The removed employee is:\n" +
-                $"{removedEmployee4.Name}, {removedEmployee4.Id}, {removedEmployee4.Gender}, {removedEmployee4.Salary}\n" +
-                $"Objects remaining in stack: {employees.Count}\n");
-            Employee removedEmployee5 = employees.Pop();
-            Console.WriteLine($"The removed employee is:\n" +
-                $"{removedEmployee5.Name}, {removedEmployee5.Id}, {removedEmployee5.Gender}, {removedEmployee5.Salary}\n" +
-                $"Objects remaining in stack: {employees.Count}\n");
 
-            //add employees back to stack
-            employees.Push(removedEmployee1);
-            employees.Push(removedEmployee2);
-            employees.Push(removedEmployee3);
-            employees.Push(removedEmployee4);
-            employees.Push(removedEmployee5);
+            //create a list for the removed employees so we save their data so we can push them back to the list later on
+            List<Employee> removedEmployees = new List<Employee>();
 
+            while (employees.Count > 0) //as long as the employees list is not empty
+            {
+                Employee removedEmployee = employees.Pop(); //remove an employee and save them as a variable
+                Console.WriteLine($"The removed employee is: {removedEmployee.Name}\n" +
+                    $"Objects remaining in stack: {employees.Count}\n");
+                removedEmployees.Add(removedEmployee); //add the saved variable of the removed employee to the remoedEmployees list
+            }
+
+            //add all the removed employees in the removedmployees list back into the employees list via push method
+            foreach(var employee in removedEmployees)
+            {
+                employees.Push(employee);
+            }
+            
             //retrieve via peek method
             Console.WriteLine("TOP OF THE LIST EMPLOYEES:\n");
             Console.WriteLine($"The employee on top of the list is:\n" +
