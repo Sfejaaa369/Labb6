@@ -22,7 +22,7 @@
             employees.Push(Prislla);
 
             //show all employee info + how many items in stack
-            Console.WriteLine("Here's an overview of all employees:\n"); 
+            Console.WriteLine("OVERVIEW OF ALL EMPLOYEES\n"); 
             foreach(var employee in employees)
             {
                 Console.WriteLine($"{employee.Name}, {employee.Id}, {employee.Gender}, {employee.Salary}\n" +
@@ -30,7 +30,7 @@
             }
 
             //remove books via Pop
-            Console.WriteLine("We are now removing employees:\n");
+            Console.WriteLine("REMOVING EMPLOYEES:\n");
             Employee removedEmployee1 = employees.Pop();
             Console.WriteLine($"The removed employee is:\n" +
                 $"{removedEmployee1.Name}, {removedEmployee1.Id}, {removedEmployee1.Gender}, {removedEmployee1.Salary}\n" +
@@ -60,8 +60,14 @@
             employees.Push(removedEmployee5);
 
             //retrieve via peek method
-            Console.WriteLine($"The employee on top of the list is: {employees.Peek().Name}, {employees.Peek().Id}, {employees.Peek().Gender}, {employees.Peek().Salary}");
-            Console.WriteLine($"The employee on top of the list is: {employees.Peek().Name}, {employees.Peek().Id}, {employees.Peek().Gender}, {employees.Peek().Salary}");
+            Console.WriteLine("TOP OF THE LIST EMPLOYEES:\n");
+            Console.WriteLine($"The employee on top of the list is:\n" +
+                $"{employees.Peek().Name}, {employees.Peek().Id}, {employees.Peek().Gender}, {employees.Peek().Salary}\n" +
+                $"Objects remaining in stack: {employees.Count}\n");
+            Console.WriteLine($"The employee on top of the list is:\n" +
+                $"{employees.Peek().Name}, {employees.Peek().Id}, {employees.Peek().Gender}, {employees.Peek().Salary}\n" +
+                $"Objects remaining in stack: {employees.Count}\n");
+
 
         }
     }
