@@ -8,18 +8,18 @@
             Stack<Employee> employees = new Stack<Employee>();
 
             //create employees via construktor
-            Employee Svea = new Employee("E001", "Svea", "woman", 45000);
-            Employee Oskar = new Employee("E002", "Oskar", "man", 44000);
-            Employee Sara = new Employee("E003", "Sara", "woman", 44500);
-            Employee Elin = new Employee("E004", "Elin", "woman", 44500);
-            Employee Prislla = new Employee("E005", "Prislla", "woman", 44500);
+            Employee employee1 = new Employee("E001", "Svea", "woman", 45000);
+            Employee employee2 = new Employee("E002", "Oskar", "man", 44000);
+            Employee employee3 = new Employee("E003", "Sara", "woman", 44500);
+            Employee employee4 = new Employee("E004", "Elin", "woman", 44500);
+            Employee employee5 = new Employee("E005", "Prislla", "woman", 44500);
 
             //push employees into stack
-            employees.Push(Svea);
-            employees.Push(Oskar);
-            employees.Push(Sara);
-            employees.Push(Elin);
-            employees.Push(Prislla);
+            employees.Push(employee1);
+            employees.Push(employee2);
+            employees.Push(employee3);
+            employees.Push(employee4);
+            employees.Push(employee5);
 
             //show all employee info + how many items in stack
             Console.WriteLine("OVERVIEW OF ALL EMPLOYEES\n"); 
@@ -68,7 +68,14 @@
                 $"{employees.Peek().Name}, {employees.Peek().Id}, {employees.Peek().Gender}, {employees.Peek().Salary}\n" +
                 $"Objects remaining in stack: {employees.Count}\n");
 
-
+            if (employees.Contains(employee3))
+            {
+                Console.WriteLine("Yes, employee 3 is in the stack.");
+            }
+            else
+            {
+                Console.WriteLine("No, employee 3 is not in the stack.");
+            }
         }
     }
 }
